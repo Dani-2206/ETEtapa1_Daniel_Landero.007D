@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet"> 
+    <link href="{% static 'css/estilos.css' %}" type="text/css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="icon" href="{% static 'img/icono.jpg'%}">
+    <title>Pagina Principal</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
+          <span class="navbar-toggler-icon"></span>
+           
+        </button>
+      
+        <a class="navbar-brand">
+          <img src="{% static 'img/icono.jpg'%} " width="50" height="50" alt="">
+        </a>
+
+  
+        <div class="collapse navbar-collapse" id="opciones">   
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link " href="{% url 'index' %}" >Mostrar periodistas</a>
+            </li>    
+          </ul>
+        </div>
+    </nav>
+
+    <h3>Creacion Usuario</h3>
+        <form name="contact" method="POST" action="#" id="formulario">
+                {% csrf_token %}
+                <div class="container">
+                    <div class="form-grup">
+                        {{formulario_c.rut.label}}<br>
+                        {{formulario_c.rut}}<br>
+                    </div>
+
+
+
+
+
+                    <div class="form-group">
+                        {{formulario_c.nombre_c.label}}<br>
+                        {{formulario_c.nombre_c}}<br>
+
+                    </div>
+
+
+
+                    <div class="form-grup">
+                        {{formulario_c.telefono.label}} <br>
+                        {{formulario_c.telefono}}<br>
+
+                    </div>
+
+                    <div class="form-grup">
+                        {{formulario_c.direccion.label}} <br>
+                        {{formulario_c.direccion}}<br>
+                        
+
+                    </div>
+
+                    <div class="form-group">
+                        {{formulario_c.email.label}}<br>
+                        {{formulario_c.email}}<br>
+
+                    </div>
+
+                    <div class="form-check">
+                        {{formulario_c.pais.label}}<br>
+                        {{formulario_c.pais}}<br>
+                        
+
+                    </div>
+
+                    <div class="form-group">
+                        {{formulario_c.contrasena.label}}<br>
+                        {{formulario_c.contrasena}}<br>
+                        
+
+                    </div>
+                    <input type="submit" values="enviar" name="enviar">
+                    <input type="reset" name="borrar" id="borrar">
+    
+                </div>
+
+
+        </form>
+ 
+
+  
+    <footer >
+        <div class="left col-md col-lg col-sm col-xl pie">
+          <img  width="30px" height="20px" src="{% static 'img/icono.jpg'%}">
+          <h4>Autor:Daniel Landero </h4>
+        
+          <br>
+          Gmail: dlandero.alexander@gmail.com  <br>
+          derechos reservados &copy; 
+        </div>
+       
+      </footer>
+
+
+  
+
+
+
+    
+</body>
+</html>

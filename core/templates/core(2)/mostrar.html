@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet"> 
+    <link href="{% static 'css/estilos.css' %}" type="text/css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="icon" href="{% static 'img/icono.jpg'%}">
+    <title>Pagina Principal</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
+          <span class="navbar-toggler-icon"></span>
+           
+        </button>
+      
+        <a class="navbar-brand">
+          <img src="{% static 'img/icono.jpg'%} " width="50" height="50" alt="">
+        </a>
+
+  
+        <div class="collapse navbar-collapse" id="opciones">   
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link " href="{% url 'index' %}" >Mostrar periodistas</a>
+            </li>    
+          </ul>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Rut</th>
+                <th>Foto</th>
+                <th>Nombre Completo</th>
+                <th>Telefono</th>
+                <th>Direccion</th>
+                <th>Email</th>
+                <th>Pais</th>
+                <th>Contraña</th>
+            </tr>    
+        </thead>
+        <tbody>
+            {%for i in todos%}
+                <tr>
+                    <td>{{i.rut}}</td>
+                    <td>{{i.foto}}</td>
+                    <td>{{i.nombre_c}}</td>
+                    <td>{{i.telefono}}</td>
+                    <td>{{i.direccion}}</td>
+                    <td>{{i.email}}</td>
+                    <td>{{i.pais}}</td>
+                    <td>{{i.contrasena}}</td>
+                </tr>
+            {%endfor%}
+
+        </tbody>
+    </table>
+
+    <a class="btn btn-primary" href="{% url 'creacion_usuario'%}">Quiere ingresar otro </a>
+
+
+
+  
+    <footer >
+        <div class="left col-md col-lg col-sm col-xl pie">
+          <img  width="30px" height="20px" src="{% static 'img/icono.jpg'%}">
+          <h4>Autor:Daniel Landero </h4>
+        
+          <br>
+          Gmail: dlandero.alexander@gmail.com  <br>
+          derechos reservados &copy; 
+        </div>
+       
+      </footer>
+
+
+  
+
+
+
+    
+</body>
+</html>
