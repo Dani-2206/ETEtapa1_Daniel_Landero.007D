@@ -1,14 +1,51 @@
 .pie {
-    padding: 3px;
-    background-color: #000;
-    color: #fff;
-    color: bl;
-  
-  
-  }
+  padding: 3px;
+  background-color: #000;
+  color: #fff;
+  color: bl;
+
+
+}
 
 
 #fotos {
-  height: 13px;
-  width: 12px;
+height: 13px;
+width: 12px;
+}
+
+
+
+
+.fondo_p
+{
+background-image: linear-gradient(to right top, #2f55de, #0073dd, #007ba7, #007a61, #247428);
+}
+
+.color_na
+{
+background-image: linear-gradient(to left, #1f40b5, #006fc9, #2f96cf, #81b9d0, #ccd8da);
+}
+
+
+.color_b
+{
+color: #fff;
+}
+
+.parrafo
+{
+padding: 12px;
+}
+
+
+
+.parrafo img{
+width: 310px;
+float: left;
+}
+
+
+.alinear
+{
+text-align: center;
 }
