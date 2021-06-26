@@ -2,7 +2,7 @@
   padding: 3px;
   background-color: #000;
   color: #fff;
-  color: bl;
+  
 
 
 }
@@ -34,7 +34,9 @@ color: #fff;
 
 .parrafo
 {
-padding: 12px;
+  text-align: right;
+  padding: 12px ;
+  
 }
 
 
@@ -42,6 +44,7 @@ padding: 12px;
 .parrafo img{
 width: 310px;
 float: left;
+
 }
 
 
