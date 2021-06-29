@@ -11,7 +11,7 @@ def index(request):
 def form_creacion(request):
 
     if request.method == "POST":
-        formulario=formu_p(request.POST)
+        formulario=formu_p(request.POST, request.FILE)
         if formulario.is_valid():
            formulario.save()
            return redirect('mostrar')

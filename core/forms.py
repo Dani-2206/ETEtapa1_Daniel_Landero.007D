@@ -32,13 +32,7 @@ class formu_p(ModelForm):
                     'min_lenght':'10'           
                 }
             ),
-            'foto': forms.ImageField(label='Imagen',
-                widget=forms.ClearableFileInput(
-                attrs = {
-                    'class': 'form-group'
-                }
-                )
-            ),
+            'foto': forms.FileInput,
             'nombre_c': forms.TextInput(
                 attrs={
                     'class':'form-control',
