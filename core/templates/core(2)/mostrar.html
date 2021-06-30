@@ -64,16 +64,17 @@
         <tbody>
             {%for i in todos%}
                 <tr>
-                    <td>{{i.rut}}</td>
-                    <td>{{i.foto}}</td>
-                    <td>{{i.nombre_c}}</td>
-                    <td>{{i.telefono}}</td>
-                    <td>{{i.direccion}}</td>
-                    <td>{{i.email}}</td>
-                    <td>{{i.pais}}</td>
+                    <td >{{i.rut}}</td>
+                    <td ><img src="{{i.foto}}" width="14" height="16"></td>
+                   
+                    <td >{{i.nombre_c}}</td>
+                    <td >{{i.telefono}}</td>
+                    <td >{{i.direccion}}</td>
+                    <td >{{i.email}}</td>
+                    <td >{{i.pais}}</td>
                     <td>{{i.contrasena}}</td>
-                    <td><a href="{% url 'modificar' i.rut%}" class="btn btn-primary">Modificar</a></td>
-                    <td><a href="{% url 'modificar' i.rut%}" class="btn btn-danger">Eliminar</a></td>
+                    <td ><a href="{% url 'modificar' i.rut%}" class="btn btn-primary">Modificar</a></td>
+                    <td ><a href="{% url 'modificar' i.rut%}" class="btn btn-danger">Eliminar</a></td>
                 </tr>
             {%endfor%}
 

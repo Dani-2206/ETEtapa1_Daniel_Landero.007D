@@ -11,7 +11,7 @@ class pais(models.Model):
 
 class periodista(models.Model):
     rut= models.CharField(max_length=20,primary_key=True,verbose_name='Rut del periodista')
-    foto= models.ImageField(upload_to='fotos/', null=True,blank=True)
+    foto= models.ImageField(upload_to='images/', null=True,blank=True)
     nombre_c = models.CharField(max_length=100,verbose_name='Nombre completo')
     telefono = models.IntegerField(verbose_name='Numero de telefono')
     direccion = models.CharField(max_length=90,verbose_name='Direccion')
