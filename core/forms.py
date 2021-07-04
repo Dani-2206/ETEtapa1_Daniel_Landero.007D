@@ -36,7 +36,8 @@ class formu_p(ModelForm):
             'nombre_c': forms.TextInput(
                 attrs={
                     'class':'form-control',
-                    'min_lenght':'40',
+                    'min_lenght':'30',
+                    'max_lenght':'100',
                     'placeholder':'Fulanito marcelo sabal aguilera',
                     'name':'nombre'
                 }
@@ -52,7 +53,8 @@ class formu_p(ModelForm):
                 attrs={
                     'class':'form-control',
                     'placeholder':'jose miguel 1234',
-                    'name':'direccion'
+                    'name':'direccion',
+                    'min_length':'9'
                 }
             ),
             'email': forms.TextInput(

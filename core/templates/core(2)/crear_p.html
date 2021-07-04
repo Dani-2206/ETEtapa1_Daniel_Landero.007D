@@ -9,7 +9,111 @@
     <link href="{% static 'css/estilos.css' %}" type="text/css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="icon" href="{% static 'img/icono.jpg'%}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
     <title>Pagina Principal</title>
+    <style>
+      label.error
+      {
+        color: red;
+        width: 300px;
+        font-size: 0.08em;
+        margin-bottom: 10px;
+        margin-top: -5px;
+      }
+      .error-control
+      {
+        border: 5px solid red;
+        
+      }
+    </style>
+
+<script> 
+
+  $(function()
+  {
+    $("#formulario").validate({
+      rules: {
+          rut: "required",
+
+          nombre: {
+            required: true,
+          },
+
+        telefono:
+        {
+          number: true,
+          required: true,
+        },
+        
+
+        direccion: "required",
+
+        email:
+        {
+          required: true,
+          email: true
+        },
+
+        pais: { required:true },
+
+
+        contrasena: "required",
+        
+
+      },
+
+      messages: {
+
+        rut: {
+          required:'debe ingresar su nombre',
+          minlength:'debe ingresar por lo menos 10 caracteres'
+        },
+
+      
+
+        nombre: {
+          required:'debe ingresar su nombre Completo'
+          ,max_leght :'El maximo de caracteres es de 100',
+          min_lenght: 'Debe ser por lo menos 30'
+        },
+
+        telefono: {
+          Number:'debe ingresar numeros',
+          required:'debe ingresar un numero de telefono',
+          minlength:'deben ser por lo menos 9 numeros'
+        },
+
+        direccion: {
+          required:'debe colocar su direccion',
+          min_lenght:'deben ser por lo menos 9'
+        },
+
+
+        email: {
+          required:'debe colocar un email',
+          email:'debe colocarlo con el formato solicitado'
+        },
+
+        pais: {
+          required:'debe seleccionar un pais'
+
+        },
+
+
+        contrasena: {
+          required:'debe colocar una contraseña',
+          minlength:'debe colocar por lo menos 5 caracteres'
+        },
+
+      }
+      
+    });
+    
+
+  });
+
+</script>
+
 </head>
 <body>
     <nav class="navbar navbar-expand-sm navbar-light bg-light color_na">
